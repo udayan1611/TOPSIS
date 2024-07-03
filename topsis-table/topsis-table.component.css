@@ -1,0 +1,231 @@
+
+/* .container {
+    margin-top: 20px;
+  }
+  
+  .col-md-3 {
+    padding: 0 10px;
+  }
+  
+  label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .p-table {
+    margin-top: 20px;
+  }
+  
+  th, td {
+    padding: 8px 12px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  input[type="number"] {
+    width: 60px;
+    padding: 5px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    margin-right: 10px;
+  } 
+
+#savebtn{
+    text-align: center;
+    margin-left: 600px;
+} */
+
+
+
+
+
+
+
+
+/* 
+.container {
+  margin-top: 20px;
+}
+
+.col-md-3 {
+  padding: 0 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p-table {
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px 12px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+#savebtn {
+  text-align: center;
+  margin-left: 600px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.topsis-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topsis-table th, .topsis-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.topsis-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+#btn1{
+  margin-left: 600px;
+} */
+
+
+/* ............... */
+
+
+/* .container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.table-wrapper {
+  width: 100%;
+  min-width: 800px; 
+}
+
+.topsis-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topsis-table th, .topsis-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.topsis-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #f2f2f2;
+} */
+
+
+.container {
+  margin-top: 20px;
+}
+
+.col-md-3 {
+  padding: 0 10px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p-table {
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 8px 12px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="number"] {
+  width: 60px;
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-right: 10px;
+}
+
+#savebtn {
+  text-align: center;
+  margin-left: 600px;
+}
+
+/* //   .table-wrapper {
+//     overflow-x: auto;
+//     overflow-y: auto;
+//     overflow: auto;
+//   } */
+
+.topsis-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.topsis-table th, .topsis-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.topsis-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+}
+
+#btn{
+  margin-left: 525px;
+}
+
+.scrollable-table{
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+#addcriteria{
+  margin-left: 1100px;
+}
+
+#calculateRank{
+  margin-left: 560px;
+}

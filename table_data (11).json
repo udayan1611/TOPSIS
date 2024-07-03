@@ -1,0 +1,1 @@
+[{"criteria":"Criteria-1","weight":0.5,"minimize":false,"values":[10,20,300,40]},{"criteria":"Criteria-2","weight":0.25,"minimize":false,"values":[25,34,45,26]},{"criteria":"Criteria-3","weight":0.25,"minimize":false,"values":[65,53,454,45]}]

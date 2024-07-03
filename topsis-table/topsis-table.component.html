@@ -1,0 +1,297 @@
+<!-- 
+   <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <label for="system">System</label>
+        <p-dropdown [options]="systems" [(ngModel)]="selectedSystem" [checkmark]="true" [showClear]="true" placeholder="Select a system"></p-dropdown>
+      </div>
+    </div>
+    <br>
+    <div>
+      <h3>Select Criteria Preferences:</h3>
+      <div *ngFor="let criteria of criteriaList">
+        <label>
+          <input type="checkbox" [(ngModel)]="criteria.minimize"> Minimize {{ criteria.criteria }}
+        </label>
+        <input type="text" [(ngModel)]="criteria.criteria" />
+      </div>
+    </div>
+    <br>
+    <div class="table-wrapper">
+      <table class="topsis-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let criteria of criteriaList">{{criteria.criteria}}</th>
+            <th *ngIf="alternatives.length > 0">Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let alternative of alternatives; let i = index">
+            <tr>
+              <td class="alternative-header"><input type="text" [(ngModel)]="alternative" /></td>
+              <td *ngFor="let criteria of criteriaList; let j = index">
+                <input type="number" pInputText [(ngModel)]="criteria.values[i]" />
+              </td>
+              <td *ngIf="alternatives.length > 0">{{ alternativeRanks[i] }}</td>
+            </tr>
+          </ng-container>
+          <tr>
+            <td>Weights</td>
+            <td *ngFor="let criteria of criteriaList; let j = index">
+              <input type="number" pInputText [(ngModel)]="criteria.weight" />
+            </td>
+            <td *ngIf="alternatives.length > 0"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="mt-2">
+      <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addCriteria()">Add Criteria</button>
+    </div>
+    <br>
+    <div class="mt-2">
+      <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addAlternative()">Add Alternative</button>
+    </div>
+    <br>
+    <div class="mt-4">
+      <button pButton type="button" label="Calculate Ranks" class="p-button-primary" (click)="calculateRank()"></button>
+    </div>
+    <br>
+    <div class="mt-4">
+      <button pButton type="button" label="SAVE" id="btn1" class="p-button-success" (click)="saveTable()"></button>
+      <button pButton type="button" label="CANCEL" class="p-button-danger" (click)="clearTable()"></button>
+    </div>
+  </div>
+   -->
+
+<!--    
+   <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-3">
+        <label for="system">System</label>
+        <p-dropdown [options]="systems" [(ngModel)]="selectedSystem" [checkmark]="true" [showClear]="true" placeholder="Select a system"></p-dropdown>
+      </div>
+    </div>
+    <br>
+    <div>
+      <h3>Select Criteria Preferences:</h3>
+      <div *ngFor="let criteria of criteriaList">
+        <label>
+          <input type="checkbox" [(ngModel)]="criteria.minimize"> Minimize {{ criteria.criteria }}
+        </label>
+        <input type="text" [(ngModel)]="criteria.criteria" />
+      </div>
+    </div>
+    <br>
+    <div class="table-wrapper">
+      <table class="topsis-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let criteria of criteriaList">{{criteria.criteria}}</th>
+            <th *ngIf="alternatives.length > 0">Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let alternative of alternatives; let i = index">
+            <tr>
+              <td class="alternative-header"><input type="text" [(ngModel)]="alternative" /></td>
+              <td *ngFor="let criteria of criteriaList; let j = index">
+                <input type="number" pInputText [(ngModel)]="criteria.values[i]" />
+              </td>
+              <td *ngIf="alternatives.length > 0">{{ alternativeRanks[i] }}</td>
+            </tr>
+          </ng-container>
+          <tr>
+            <td>Weights</td>
+            <td *ngFor="let criteria of criteriaList; let j = index">
+              <input type="number" pInputText [(ngModel)]="criteria.weight" />
+            </td>
+            <td *ngIf="alternatives.length > 0"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br>
+    <div class="mt-2">
+      <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addCriteria()">Add Criteria</button>
+    </div>
+    <br>
+    <div class="mt-2">
+      <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addAlternative()">Add Alternative</button>
+    </div>
+    <br>
+    <div class="mt-4">
+      <button pButton type="button" label="Calculate Ranks" class="p-button-primary" (click)="calculateRank()"></button>
+    </div>
+    <br>
+    <div class="mt-4">
+      <button pButton type="button" label="SAVE" id="btn1" class="p-button-success" (click)="saveTable()"></button>
+      <button pButton type="button" label="CANCEL" class="p-button-danger" (click)="clearTable()"></button>
+    </div>
+  </div>
+  
+
+
+  
+
+ -->
+
+<!-- ............ -->
+
+
+
+
+<!-- 
+ <div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <label for="system">System</label>
+      <p-dropdown [options]="systems" [(ngModel)]="selectedSystem" [checkmark]="true" [showClear]="true" placeholder="Select a system"></p-dropdown>
+    </div>
+  </div>
+  <br>
+  <div>
+    <h3>Select Criteria Preferences:</h3>
+    <div *ngFor="let criteria of criteriaList">
+      <label>
+        <input type="checkbox" [(ngModel)]="criteria.minimize"> Minimize {{ criteria.criteria }}
+      </label>
+      <input type="text" [(ngModel)]="criteria.criteria" />
+    </div>
+  </div>
+  <br>
+  <div class="table-container">
+    <div class="table-wrapper">
+      <table class="topsis-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th *ngFor="let criteria of criteriaList">{{criteria.criteria}}</th>
+            <th *ngIf="alternatives.length > 0">Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let alternative of alternatives; let i = index">
+            <tr>
+              <td class="alternative-header"><input type="text" [(ngModel)]="alternative" /></td>
+              <td *ngFor="let criteria of criteriaList; let j = index">
+                <input type="number" pInputText [(ngModel)]="criteria.values[i]" />
+              </td>
+              <td *ngIf="alternatives.length > 0">{{ alternativeRanks[i] }}</td>
+            </tr>
+          </ng-container>
+          <tr>
+            <td>Weights</td>
+            <td *ngFor="let criteria of criteriaList; let j = index">
+              <input type="number" pInputText [(ngModel)]="criteria.weight" />
+            </td>
+            <td *ngIf="alternatives.length > 0"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <br>
+  <div class="mt-2">
+    <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addCriteria()">Add Criteria</button>
+  </div>
+  <br>
+  <div class="mt-2">
+    <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addAlternative()">Add Alternative</button>
+  </div>
+  <br>
+  <div class="mt-4">
+    <button pButton type="button" label="Calculate Ranks" class="p-button-primary" (click)="calculateRank()"></button>
+  </div>
+  <br>
+  <div class="mt-4">
+    <button pButton type="button" label="SAVE" id="btn1" class="p-button-success" (click)="saveTable()"></button>
+    <button pButton type="button" label="CANCEL" class="p-button-danger" (click)="clearTable()"></button>
+  </div>
+</div> -->
+
+
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+
+      <!-- <label for="system">System</label> -->
+      <!-- <p-dropdown [options]="system" [(ngModel)]="selectedSystem" [showClear]="true" placeholder="Select a system"></p-dropdown> -->
+
+      <select id="dropdown" name="Links" class="form-control" required>
+        <option disabled selected value>Select</option>
+        <option value="Link1">Fighter Aircraft</option>
+        <option value="Link2"> Surface Platform</option>
+        <option value="other">UAV</option>
+        <option value="other">UCAV</option>
+        <option value="other">Main Battle Tank</option>
+    </select>
+    </div>
+  </div>
+ 
+  <!-- <div>
+    <h3>Select Criteria Preferences:</h3>
+    <div *ngFor="let criteria of criteriaList">
+      <label>
+        <input type="checkbox" [(ngModel)]="criteria.minimize"> {{ criteria.criteria }}
+      </label>&nbsp;
+      <input type="text" [(ngModel)]="criteria.criteria" />
+    </div>
+  </div> -->
+  <div class="mt-2">
+      <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" id="addcriteria" (click)="addCriteria()">Add Criteria</button>
+    </div>
+  <br>
+  <div class="scrollable-table">
+  <div class="table-wrapper">
+  <table class="topsis-table" >    
+    <thead>
+      <tr>
+        <th></th>
+        <th *ngFor="let criteria of criteriaList"> <input type="text" placeholder=" {{criteria.criteria}}"> &nbsp; <input type="checkbox" [(ngModel)]="criteria.minimize">&nbsp;</th>
+      
+        <th *ngIf="alternatives.length > 0" >Rank</th>
+        
+      </tr>
+    </thead>
+    <tr>  
+      <td><strong>Weights</strong></td>
+
+      <td *ngFor="let criteria of criteriaList; let j = index">
+        <input type="number" pInputText [(ngModel)]="criteria.weight" />
+      </td>
+      <td *ngIf="alternatives.length > 0"></td>
+    </tr>
+    <tbody>
+      <ng-container *ngFor="let alternative of alternatives; let i = index">
+        <tr>
+          <td class="alternative-header"><input type="text" placeholder="{{alternative}}"></td>
+          <td *ngFor="let criteria of criteriaList; let j = index">
+              <input type="number" pInputText [(ngModel)]="criteria.values[i]" />
+          </td>
+          <td *ngIf="alternatives.length > 0">{{ alternativeRanks[i] }}</td>
+        </tr>
+      </ng-container>
+     
+    </tbody>
+  </table>
+</div>
+</div>
+
+<br>
+  <div class="mt-2">
+    <button pButton type="button" icon="pi pi-plus" class="p-button-rounded p-button-primary" (click)="addAlternative()">Add Alternative</button>
+  </div>
+  <br>
+  <div class="mt-4">
+    <button pButton type="button" label="Calculate Ranks" class="p-button-primary" id="calculateRank" (click)="calculateRank()"></button>
+  </div> 
+  <br>
+  <div class="mt-4">
+    <button pButton type="button" label="SAVE" id="btn" class="p-button-success" icon="pi pi-check"  (click)="saveTable()"></button>
+    <button pButton type="button" label="CANCEL" class="p-button-danger" icon="pi pi-times" (click)="clearTable()"></button>
+  </div>
+</div>

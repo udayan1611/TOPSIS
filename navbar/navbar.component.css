@@ -1,0 +1,22 @@
+ .navbar {
+    background-color: #007bff; /* Primary color */
+    padding: 20px; /* Padding around the navbar */
+    border-radius: 0; /* Remove border radius */
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .navbar-brand:hover {
+    color: #ffffff; /* Change text color on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+  .navbar .navbar-brand {
+    text-align: center;
+    width: 100%;
+  }
